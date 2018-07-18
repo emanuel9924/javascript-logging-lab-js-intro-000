@@ -3,7 +3,7 @@ const fs = require('fs')
 const jsdom = require('jsdom')
 const path = require('path')
 
-
+console.error ('halp')
 describe('index', () => {
   const html = '<div></div>'
   const src = path.resolve(__dirname, '..', 'index.js')
@@ -20,7 +20,7 @@ describe('index', () => {
     })
   })
 
-  it('calls console.log()', done => {
+  it('calls console.log('HALP')', done => {
     const spy = expect.spyOn(console, 'log').andCallThrough()
 
     jsdom.env(html, [src], {
